@@ -17,8 +17,6 @@ export PATH=/home/y/bin:$HOME/bin:${PATH}
 alias el='tail -f /home/y/logs/yapache/error'
 alias cdh='cd /home/y/share/htdocs'
 alias cds='cd /home/y/share'
-alias cdy='cd /home/y/share/pear/Yahoo'
-alias cdc='cd /home/y/conf/yapache/include'
 
 alias go='~/.go '
 alias deploy='~/.deploy '

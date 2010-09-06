@@ -47,5 +47,5 @@ set -o vi
 ### Y! SPECIFIC SETTINGS ###
 
 if [ -e /home/y/ ] || [ "$(hostname)" == 'speakspend-lm' ]; then
-	. ~/.y
+	. ~/.ybashrc
 fi
