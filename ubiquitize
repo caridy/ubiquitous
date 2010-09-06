@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ln -s ~/repository/ubiquitous/vimrc    ~/.vimrc
+ln -s ~/repository/ubiquitous/bashrc   ~/.bashrc
+ln -s ~/repository/ubiquitous/bashrc   ~/.bash_profile
+ln -s ~/repository/ubiquitous/inputrc  ~/.inputrc
+
+ln -s ~/repository/ubiquitous/y/bashrc	~/.ybashrc
+ln -s ~/repository/ubiquitous/y/screen	~/.screen
+ln -s ~/repository/ubiquitous/y/go  	~/.go
+ln -s ~/repository/ubiquitous/y/deploy	~/.deploy

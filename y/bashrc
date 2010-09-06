@@ -1,0 +1,39 @@
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+   . /etc/bashrc
+fi
+
+# CVS
+export CVSROOT=vault.yahoo.com:/CVSROOT
+export CVSTOP=/homes/username/dev
+export CVS_RSH=yssh
+
+# SVN
+export SVN_SSH=/usr/local/bin/yssh
+export SVNROOT=svn+ssh://svn.corp.yahoo.com/
+
+export PATH=/home/y/bin:$HOME/bin:${PATH}
+
+alias el='tail -f /home/y/logs/yapache/error'
+alias cdh='cd /home/y/share/htdocs'
+alias cds='cd /home/y/share'
+alias cdy='cd /home/y/share/pear/Yahoo'
+alias cdc='cd /home/y/conf/yapache/include'
+
+alias go='~/.go '
+alias deploy='~/.deploy '
+alias update='~/.go '
+alias s='screen -xU'
+alias sn='screen'
+alias sx='pkill screen'
+
+# developement
+alias pkg='rm *.tgz; yinst_create -t link --clean *yicf; yinst i *.tgz;'
+
+#igor
+alias ir='yinst restore -igor '
+alias irn='yinst restore -n -igor '
+
+#dev
+alias vm1='ssh floweridea-vm1.miami.corp.yahoo.com'
+alias vm2='ssh floweridea-vm2.miami.corp.yahoo.com'

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+############################ template.sh ###########################
+# Author Name | caridy@yahoo-inc.com
+# Copyright 2010 Caridy Patino
+####################################################################
+
+scp ~/.ssh/id_rsa caridy@$1:~/.ssh/id_rsa
+scp ~/.ssh/id_rsa.pub caridy@$1:~/.ssh/authorized_keys2
+
+scp ~/.vimrc caridy@$1:~/.vimrc
+scp ~/.bashrc caridy@$1:~/.bashrc
+scp ~/.bash_profile caridy@$1:~/.bash_profile
+scp ~/.inputrc caridy@$1:~/.inputrc
+
+scp ~/.ybashrc caridy@$1:~/.ybashrc
+scp ~/.screen caridy@$1:~/.screen
+scp ~/.go caridy@$1:~/.go
+scp ~/.deploy caridy@$1:~/.deploy
+
+ssh $1
