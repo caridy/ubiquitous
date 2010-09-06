@@ -1,14 +1,11 @@
 #!/bin/bash
 
-############################ template.sh ###########################
+############################ deploy.sh ###########################
 # Author Name | caridy@yahoo-inc.com
 # Copyright 2010 Caridy Patino
 ####################################################################
 
-yinst i -br test ysubversion
-yinst i git_svn_y
-yinst i ports/screen
-yinst i vim7 -br current
+yinst i ysubversion git_svn_y vim7 -br test
 
 mkdir -p ~/repository/git ~/repository/svn
 cd ~/repository/git && git clone git://github.com/scrooloose/nerdtree.git
@@ -19,8 +16,10 @@ cd ~/repository && git clone git://github.com/caridy/ubiquitous.git
          
 # install nerdtree
 mkdir -p ~/.vim/plugin
-cp ~/repository/nerdtree/plugin/NERD_tree.vim ~/.vim/plugin/
+cp ~/repository/git/nerdtree/plugin/NERD_tree.vim ~/.vim/plugin/
 
 # allow for symlink development
-echo "open_basedir = \${open_basedir}:/home/caridy/ > /home/y/etc/php/caridy.ini"
-yinst restart yapache
+if [ -e /home/y/etc/php/ ]; then
+    echo "open_basedir = \${open_basedir}:/home/caridy/ > /home/y/etc/php/caridy.ini"
+    yinst restart yapache
+fi
