@@ -27,6 +27,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias w='w|sort'
+alias l='ls -la'
 alias ls='ls --color'
 
 alias bashrc='$EDITOR ~/.bashrc; source ~/.bashrc'
@@ -49,3 +50,6 @@ set -o vi
 if [ -e /home/y/ ] || [ "$(hostname)" == 'speakspend-lm' ]; then
 	. ~/.ybashrc
 fi
+
+alias ls='python -m SimpleHTTPServer 8080'
+alias irc='irssi -c irc.freenode.net -n caridy'
