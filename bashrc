@@ -50,6 +50,3 @@ set -o vi
 if [ -e /home/y/ ] || [ "$(hostname)" == 'speakspend-lm' ]; then
 	. ~/.ybashrc
 fi
-
-alias ls='python -m SimpleHTTPServer 8080'
-alias irc='irssi -c irc.freenode.net -n caridy'
