@@ -1,0 +1,5 @@
+# sudo port install coreutils +with_default_names
+# Adding support for colors in the terminal
+
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export MANPATH=/opt/local/share/man:$MANPATH

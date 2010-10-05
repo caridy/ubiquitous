@@ -4,6 +4,7 @@ ln -s ~/repository/ubiquitous/vimrc    ~/.vimrc
 ln -s ~/repository/ubiquitous/bashrc   ~/.bashrc
 ln -s ~/repository/ubiquitous/bashrc   ~/.bash_profile
 ln -s ~/repository/ubiquitous/inputrc  ~/.inputrc
+ln -s ~/repository/ubiquitous/laptop   ~/.bash_laptop
 
 ln -s ~/repository/ubiquitous/y/bashrc	~/.ybashrc
 ln -s ~/repository/ubiquitous/y/screen	~/.screen

@@ -28,10 +28,14 @@ alias sx='pkill screen'
 # developement
 alias pkg='rm *.tgz; yinst_create -t link --clean *yicf; yinst i *.tgz;'
 
-#igor
+# igor
 alias ir='yinst restore -igor '
 alias irn='yinst restore -n -igor '
 
-#dev
+# dev
 alias vm1='ssh floweridea-vm1.miami.corp.yahoo.com'
 alias vm2='ssh floweridea-vm2.miami.corp.yahoo.com'
+
+# build
+export REMOTE_WEBDEV=floweridea-vm2.miami.corp.yahoo.com:/home/caridy/src/searchfe/projects/web/src/webdev
+export LOCAL_WEBDEV=/Users/caridy/dev_svn/search/web/src/webdev

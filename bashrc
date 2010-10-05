@@ -27,8 +27,13 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias w='w|sort'
+alias ls='ls --color=auto'
+alias ll='ls --color=auto -lhF'
 alias l='ls -la'
-alias ls='ls --color'
+alias cd..="cd .."
+alias c="clear"
+alias e="exit"
+alias ..="cd .."
 
 alias bashrc='$EDITOR ~/.bashrc; source ~/.bashrc'
 alias $LOCALRC='$EDITOR ~/.$LOCALRC; source ~/.bashrc'
@@ -43,7 +48,11 @@ alias $LOCALRC='$EDITOR ~/.$LOCALRC; source ~/.bashrc'
 # vim bindings for bash
 set -o vi
 
+### Laptop SPECIFIC SETTINGS ###
 
+if [ "$(hostname)" == 'speakspend-lm' ]; then
+	. ~/.bash_laptop
+fi
 
 ### Y! SPECIFIC SETTINGS ###
 
