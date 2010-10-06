@@ -8,8 +8,18 @@ export CVSROOT=vault.yahoo.com:/CVSROOT
 export CVSTOP=/homes/username/dev
 export CVS_RSH=yssh
 
-# SVN
-export SVN_SSH=/usr/local/bin/yssh
+# yssh config
+if [ -x /usr/local/bin/yssh ]; then
+  # SVN
+  export SVN_SSH=/usr/local/bin/yssh
+  alias ssh=yssh
+  alias scp=yscp
+fi
+
+if [ -x /usr/local/bin/yssh-find-agent ]; then
+  export SSH_AUTH_SOCK=`/usr/local/bin/yssh-find-agent`
+fi
+
 export SVNROOT=svn+ssh://svn.corp.yahoo.com/
 
 export PATH=/home/y/bin:$HOME/bin:${PATH}

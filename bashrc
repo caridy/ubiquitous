@@ -59,3 +59,9 @@ fi
 if [ -e /home/y/ ] || [ "$(hostname)" == 'speakspend-lm' ]; then
 	. ~/.ybashrc
 fi
+
+### LOCAL BASH SETTINGS ###
+
+if [ -f ~/.bash_local ]; then
+  source ~/.bash_local
+fi
