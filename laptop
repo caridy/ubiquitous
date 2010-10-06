@@ -3,3 +3,10 @@
 
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
+
+# Android SDK
+
+export PATH=${PATH}:/Users/caridy/mobile/android-sdk/tools
+
+# SVN Support
+export PATH=/opt/subversion/bin:$PATH
