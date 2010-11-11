@@ -79,3 +79,5 @@ iab aclearfix .clearfix:after {
 
 iab acss <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/reset-fonts-grids/reset-fonts-grids.css">
 iab ayui <script type="text/javascript" src="http://yui.yahooapis.com/3.1.2/build/yui/yui-min.js"></script>
+
+au BufNewFile,BufRead *.ros     setf php
