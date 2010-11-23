@@ -22,7 +22,7 @@ fi
 
 export SVNROOT=svn+ssh://svn.corp.yahoo.com/
 
-export PATH=/home/y/bin:$HOME/bin:${PATH}
+export PATH=/home/y/bin:/home/y/libexec/:$HOME/bin:${PATH}
 
 alias el='tail -f /home/y/logs/yapache/error'
 alias cdh='cd /home/y/share/htdocs'
