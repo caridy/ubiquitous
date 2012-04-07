@@ -27,8 +27,8 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias w='w|sort'
-alias ls='ls --color=auto'
-alias ll='ls --color=auto -lhF'
+alias ls='ls -Gp'
+alias ll='ls -GplhF'
 alias l='ls -la'
 alias cd..="cd .."
 alias c="clear"
@@ -38,7 +38,8 @@ alias ..="cd .."
 alias bashrc='$EDITOR ~/.bashrc; source ~/.bashrc'
 alias $LOCALRC='$EDITOR ~/.$LOCALRC; source ~/.bashrc'
 
-
+alias gs="git status"
+alias gp="git pull upstream master"
 
 ### MISCELLANEOUS ###
 
