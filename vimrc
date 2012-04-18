@@ -1,5 +1,6 @@
 syntax enable
 
+set mouse=a
 set encoding=utf-8
 
 set ruler                       " Displays column and row number.

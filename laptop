@@ -8,5 +8,14 @@ export MANPATH=/opt/local/share/man:$MANPATH
 
 export PATH=${PATH}:/Users/caridy/mobile/android-sdk/tools
 
+# Adding GIT SVN
+
+export PATH=${PATH}:/opt/local/libexex/git-core
+
 # SVN Support
 export PATH=/opt/subversion/bin:$PATH
+
+#node version manager
+. ~/nvm/nvm.sh
+
+growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
