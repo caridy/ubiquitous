@@ -1,12 +1,12 @@
 #!/bin/bash
 
-ln -s ~/repository/ubiquitous/vimrc    ~/.vimrc
-ln -s ~/repository/ubiquitous/bashrc   ~/.bashrc
-ln -s ~/repository/ubiquitous/profile  ~/.bash_profile
-ln -s ~/repository/ubiquitous/inputrc  ~/.inputrc
-ln -s ~/repository/ubiquitous/laptop   ~/.bash_laptop
+ln -s ~/repo/ubiquitous/vimrc    ~/.vimrc
+ln -s ~/repo/ubiquitous/bashrc   ~/.bashrc
+ln -s ~/repo/ubiquitous/profile  ~/.bash_profile
+ln -s ~/repo/ubiquitous/inputrc  ~/.inputrc
+ln -s ~/repo/ubiquitous/laptop   ~/.bash_laptop
 
-ln -s ~/repository/ubiquitous/y/bashrc	~/.ybashrc
-ln -s ~/repository/ubiquitous/y/screen	~/.screen
-ln -s ~/repository/ubiquitous/y/go  	~/.go
-ln -s ~/repository/ubiquitous/y/deploy	~/.deploy
+ln -s ~/repo/ubiquitous/y/bashrc	~/.ybashrc
+ln -s ~/repo/ubiquitous/y/screen	~/.screen
+ln -s ~/repo/ubiquitous/y/go  	~/.go
+ln -s ~/repo/ubiquitous/y/deploy	~/.deploy

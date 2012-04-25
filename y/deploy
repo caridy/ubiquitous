@@ -7,16 +7,16 @@
 
 yinst i ysubversion git_svn_y vim7 -br test
 
-mkdir -p ~/repository/git ~/repository/svn
-cd ~/repository/git && git clone git://github.com/scrooloose/nerdtree.git
-cd ~/repository && git clone git://github.com/caridy/ubiquitous.git
+mkdir -p ~/repo/git ~/repo/svn
+cd ~/repo/git && git clone git://github.com/scrooloose/nerdtree.git
+cd ~/repo && git clone git://github.com/caridy/ubiquitous.git
 
 # symlink the config files
-~/repository/ubiquitous/ubiquitize
+~/repo/ubiquitous/ubiquitize
          
 # install nerdtree
 mkdir -p ~/.vim/plugin
-cp ~/repository/git/nerdtree/plugin/NERD_tree.vim ~/.vim/plugin/
+cp ~/repo/git/nerdtree/plugin/NERD_tree.vim ~/.vim/plugin/
 
 # allow for symlink development
 if [ -e /home/y/etc/php/ ]; then
