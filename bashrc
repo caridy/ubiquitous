@@ -60,13 +60,13 @@ set -o vi
 
 ### Laptop SPECIFIC SETTINGS ###
 
-if [ "$(hostname)" == 'speakspend-lm' ]; then
+if [ "$(hostname)" == 'cleanglob-lm' ]; then
 	. ~/.bash_laptop
 fi
 
 ### Y! SPECIFIC SETTINGS ###
 
-if [ -e /home/y/ ] || [ "$(hostname)" == 'speakspend-lm' ]; then
+if [ -e /home/y/ ] || [ "$(hostname)" == 'cleanglob-lm' ]; then
 	. ~/.ybashrc
 fi
 

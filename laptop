@@ -17,5 +17,6 @@ export PATH=/opt/subversion/bin:$PATH
 
 #node version manager
 . ~/nvm/nvm.sh
+nvm use v0.6.14
 
 growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
