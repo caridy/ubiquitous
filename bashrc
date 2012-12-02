@@ -23,6 +23,8 @@ export EDITOR=vim
 # p: gives each file its own tab
 alias vim='vim -np'
 
+alias mojitoselenium='find . -name "*descriptor.json" | xargs -t arrow --logLevel=debug --driver=selenium --reuseSession=true '
+alias mojitoarrow='find . -name "*descriptor.json" | xargs -t arrow --logLevel=debug '
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -39,16 +41,18 @@ alias bashrc='$EDITOR ~/.bashrc; source ~/.bashrc'
 alias $LOCALRC='$EDITOR ~/.$LOCALRC; source ~/.bashrc'
 
 # development
-alias ms='mojito start --context "environment:localhost"'
-alias mt='mojito test app .'
+alias ms='./node_modules/mojito/bin/mojito start --context "environment:localhost"'
+alias mt='./node_modules/mojito/bin/mojito test app .'
+alias shake='mojito-shake --context "environment:localhost" --run'
+alias m='./node_modules/mojito/bin/mojito'
 alias jsl='find . -name "*.js" -print0 | xargs -0 jslint | more'
 alias gs="git status"
+alias gd="git pull upstream develop"
 alias gp="git pull upstream master"
 alias gf='git diff '
 alias gc='git commit -m '
-alias gr='git svn rebase'
-alias gd='git svn dcommit'
-alias ga='git add '
+#alias gr='git svn rebase'
+#alias ga='git add '
 
 ### MISCELLANEOUS ###
 

@@ -15,8 +15,15 @@ export PATH=${PATH}:/opt/local/libexex/git-core
 # SVN Support
 export PATH=/opt/subversion/bin:$PATH
 
+alias canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --user-data-dir=/tmp/newprofile --enable-experimental-extension-apis"
+alias safariperf="CA_COLOR_OPAQUE=1 /Applications/Safari.app/Contents/MacOS/Safari"
+alias ynpm="npm --registry http://ynpm-registry.corp.yahoo.com:4080/"
+
+alias mtserver = "node ./tests/run.js test -u --group server --driver nodejs"
+alias mtclient = "node ./tests/run.js test -u --group client --driver nodejs"
+
 #node version manager
 . ~/nvm/nvm.sh
-nvm use v0.6.14
+nvm use v0.8.8
 
 growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
