@@ -64,8 +64,14 @@ set -o vi
 
 ### Laptop SPECIFIC SETTINGS ###
 
-if [ "$(hostname)" == 'cleanglob-lm' ]; then
+if [ -f ~/.DS_Store ]; then
 	. ~/.bash_laptop
+fi
+
+#node version manager
+if [ -f ~/nvm/nvm.sh ]; then
+    . ~/nvm/nvm.sh
+    nvm use v0.8.8
 fi
 
 ### Y! SPECIFIC SETTINGS ###

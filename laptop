@@ -1,7 +1,7 @@
 # sudo port install coreutils +with_default_names
 # Adding support for colors in the terminal
 
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=~/bin:/opt/local/bin:/opt/local/sbin:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
 
 # Android SDK
@@ -19,11 +19,7 @@ alias canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Ch
 alias safariperf="CA_COLOR_OPAQUE=1 /Applications/Safari.app/Contents/MacOS/Safari"
 alias ynpm="npm --registry http://ynpm-registry.corp.yahoo.com:4080/"
 
-alias mtserver = "node ./tests/run.js test -u --group server --driver nodejs"
-alias mtclient = "node ./tests/run.js test -u --group client --driver nodejs"
-
-#node version manager
-. ~/nvm/nvm.sh
-nvm use v0.8.8
+alias mtserver="node ./tests/run.js test -u --group server --driver nodejs"
+alias mtclient="node ./tests/run.js test -u --group client --driver nodejs"
 
 growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
