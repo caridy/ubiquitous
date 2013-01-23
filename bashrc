@@ -43,7 +43,7 @@ alias $LOCALRC='$EDITOR ~/.$LOCALRC; source ~/.bashrc'
 # development
 alias ms='./node_modules/mojito/bin/mojito start --context "environment:localhost"'
 alias mt='./node_modules/mojito/bin/mojito test app .'
-alias shake='mojito-shake --context "environment:localhost" --run'
+alias shake='./node_modules/mojito-shaker/bin/mojito-shake --context "environment:localhost"'
 alias m='./node_modules/mojito/bin/mojito'
 alias jsl='find . -name "*.js" -print0 | xargs -0 jslint | more'
 alias gs="git status"
