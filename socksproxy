@@ -2,8 +2,8 @@
 
 var SERVER      = 'localhost',
     PORT        = 1080,
-    INTERFACE   = 'Wi-Fi',
     state       = process.argv[2],
+    INTERFACE   = process.argv[3] || 'Ethernet',
     command;
 
 var exec = require('child_process').exec;
@@ -36,6 +36,7 @@ if (state === 'on') {
 
 function printSocksProxyStatus () {
     command = 'networksetup -getsocksfirewallproxy ' + INTERFACE;
+    console.log('Interface: ' + INTERFACE);
     exec(command, function (err, stdout, stderr) {
         console.log(stdout);
     });
