@@ -23,6 +23,7 @@ export EDITOR=vim
 # p: gives each file its own tab
 alias vim='vim -np'
 
+alias selenium="java -jar /usr/local/opt/selenium-server-standalone/selenium-server-standalone-2.28.0.jar -p 4444"
 alias mojitoselenium='find . -name "*descriptor.json" | xargs -t arrow --logLevel=debug --driver=selenium --reuseSession=true '
 alias mojitoarrow='find . -name "*descriptor.json" | xargs -t arrow --logLevel=debug '
 alias rm='rm -i'
@@ -41,10 +42,12 @@ alias bashrc='$EDITOR ~/.bashrc; source ~/.bashrc'
 alias $LOCALRC='$EDITOR ~/.$LOCALRC; source ~/.bashrc'
 
 # development
-alias ms='./node_modules/mojito/bin/mojito start --context "environment:localhost"'
-alias mt='./node_modules/mojito/bin/mojito test app .'
+alias mojito='/Users/caridy/nvm/v0.8.18/bin/mojito --lib ~/repo/mojito'
+alias ms='mojito start --context "environment:development"'
+alias mw='/Users/caridy/nvm/v0.8.18/bin/mojito --lib ~/Dropbox/Public/mojito-windows'
+alias mt='mojito test app .'
 alias shake='./node_modules/mojito-shaker/bin/mojito-shake --context "environment:localhost"'
-alias m='./node_modules/mojito/bin/mojito'
+alias m='mojito'
 alias jsl='find . -name "*.js" -print0 | xargs -0 jslint | more'
 alias gs="git status"
 alias gd="git pull upstream develop"
@@ -71,7 +74,7 @@ fi
 #node version manager
 if [ -f ~/nvm/nvm.sh ]; then
     . ~/nvm/nvm.sh
-    nvm use v0.8.8
+    nvm use v0.8.18
 fi
 
 ### Y! SPECIFIC SETTINGS ###
@@ -88,3 +91,6 @@ fi
 
 export PATH=$HOME/local/bin:$PATH
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

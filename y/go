@@ -1,10 +1,5 @@
 #!/bin/bash
 
-############################ go.sh ###########################
-# Author Name | caridy@yahoo-inc.com
-# Copyright 2010 Caridy Patino
-####################################################################
-
 scp ~/.ssh/id_rsa caridy@$1:~/.ssh/id_rsa
 scp ~/.ssh/id_rsa.pub caridy@$1:~/.ssh/authorized_keys2
 

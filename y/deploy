@@ -1,10 +1,5 @@
 #!/bin/bash
 
-############################ deploy.sh ###########################
-# Author Name | caridy@yahoo-inc.com
-# Copyright 2010 Caridy Patino
-####################################################################
-
 yinst i ysubversion git_svn_y vim7 -br test
 
 mkdir -p ~/repo/git ~/repo/svn
@@ -13,7 +8,7 @@ cd ~/repo && git clone git://github.com/caridy/ubiquitous.git
 
 # symlink the config files
 ~/repo/ubiquitous/ubiquitize
-         
+
 # install nerdtree
 mkdir -p ~/.vim/plugin
 cp ~/repo/git/nerdtree/plugin/NERD_tree.vim ~/.vim/plugin/

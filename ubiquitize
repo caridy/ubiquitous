@@ -1,12 +1,17 @@
 #!/bin/bash
 
-ln -s ~/repo/ubiquitous/vimrc    ~/.vimrc
-ln -s ~/repo/ubiquitous/bashrc   ~/.bashrc
-ln -s ~/repo/ubiquitous/profile  ~/.bash_profile
-ln -s ~/repo/ubiquitous/inputrc  ~/.inputrc
-ln -s ~/repo/ubiquitous/laptop   ~/.bash_laptop
+ln -sfv ~/repo/ubiquitous/vimrc    ~/.vimrc
+ln -sfv ~/repo/ubiquitous/bashrc   ~/.bashrc
+ln -sfv ~/repo/ubiquitous/profile  ~/.bash_profile
+ln -sfv ~/repo/ubiquitous/inputrc  ~/.inputrc
+ln -sfv ~/repo/ubiquitous/laptop   ~/.bash_laptop
 
-ln -s ~/repo/ubiquitous/y/bashrc	~/.ybashrc
-ln -s ~/repo/ubiquitous/y/screen	~/.screen
-ln -s ~/repo/ubiquitous/y/go  	~/.go
-ln -s ~/repo/ubiquitous/y/deploy	~/.deploy
+ln -sfv ~/repo/ubiquitous/socksproxy     /usr/local/bin/socksproxy
+
+ln -sfv ~/repo/ubiquitous/y/bashrc	~/.ybashrc
+ln -sfv ~/repo/ubiquitous/y/screen	~/.screen
+ln -sfv ~/repo/ubiquitous/y/go  	~/.go
+ln -sfv ~/repo/ubiquitous/y/deploy	~/.deploy
+
+# init shell config
+source ~/.bashrc
