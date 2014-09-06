@@ -37,6 +37,7 @@ alias cd..="cd .."
 alias c="clear"
 alias e="exit"
 alias ..="cd .."
+alias ack="ack --ignore-dir=node_modules"
 
 alias bashrc='$EDITOR ~/.bashrc; source ~/.bashrc'
 alias $LOCALRC='$EDITOR ~/.$LOCALRC; source ~/.bashrc'
@@ -56,6 +57,8 @@ alias gf='git diff '
 alias gc='git commit -m '
 #alias gr='git svn rebase'
 #alias ga='git add '
+alias glol="git log --graph --decorate --pretty=oneline --abbrev-commit"
+alias glola="git log --graph --decorate --pretty=oneline --abbrev-commit --all"
 
 ### MISCELLANEOUS ###
 
@@ -74,7 +77,7 @@ fi
 #node version manager
 if [ -f ~/nvm/nvm.sh ]; then
     . ~/nvm/nvm.sh
-    nvm use v0.8.18
+    nvm use v0.10.13
 fi
 
 ### Y! SPECIFIC SETTINGS ###
@@ -94,3 +97,14 @@ export PATH=$HOME/local/bin:$PATH
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+
+### git pr merge: https://gist.github.com/domenic/11371574
+
+pr () {
+  git fetch origin refs/pull/$1/head:refs/remotes/origin/pr/$1 --force
+  git checkout -b pr/$1 origin/pr/$1
+  git rebase master
+  git checkout master
+  git merge pr/$1 --ff-only
+}
