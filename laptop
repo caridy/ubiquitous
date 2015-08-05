@@ -15,8 +15,17 @@ export PATH=${PATH}:/opt/local/libexex/git-core
 # SVN Support
 export PATH=/opt/subversion/bin:$PATH
 
+# YNPM
+# export HTTP_PROXY=http://127.0.0.1:8080
+
+# Chrome DevTool
 alias canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --user-data-dir=/tmp/newprofile --enable-experimental-extension-apis"
 alias safariperf="CA_COLOR_OPAQUE=1 /Applications/Safari.app/Contents/MacOS/Safari"
-alias ynpm="npm --registry http://ynpm-registry.corp.yahoo.com:4080/"
-
+# alias ynpm="npm --registry http://ynpm-registry.corp.yahoo.com:4080/"
+alias palrusso="wget --random-wait -r -p -e robots=off -U mozilla -P ~/Downloads/Internet/ "
+alias squash="git rebase -i HEAD~2"
 growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
+
+# robots
+export SPARK_TOKEN=8ab18b5a80947e63266ffed4ae7f854b1e5f7965
+export SPARK_DEVICE_ID=caridy

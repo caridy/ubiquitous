@@ -43,20 +43,12 @@ alias bashrc='$EDITOR ~/.bashrc; source ~/.bashrc'
 alias $LOCALRC='$EDITOR ~/.$LOCALRC; source ~/.bashrc'
 
 # development
-alias mojito='/Users/caridy/nvm/v0.8.18/bin/mojito --lib ~/repo/mojito'
-alias ms='mojito start --context "environment:development"'
-alias mw='/Users/caridy/nvm/v0.8.18/bin/mojito --lib ~/Dropbox/Public/mojito-windows'
-alias mt='mojito test app .'
-alias shake='./node_modules/mojito-shaker/bin/mojito-shake --context "environment:localhost"'
-alias m='mojito'
 alias jsl='find . -name "*.js" -print0 | xargs -0 jslint | more'
 alias gs="git status"
 alias gd="git pull upstream develop"
 alias gp="git pull upstream master"
 alias gf='git diff '
 alias gc='git commit -m '
-#alias gr='git svn rebase'
-#alias ga='git add '
 alias glol="git log --graph --decorate --pretty=oneline --abbrev-commit"
 alias glola="git log --graph --decorate --pretty=oneline --abbrev-commit --all"
 
@@ -77,7 +69,7 @@ fi
 #node version manager
 if [ -f ~/nvm/nvm.sh ]; then
     . ~/nvm/nvm.sh
-    nvm use v0.10.13
+    nvm use v0.12.1
 fi
 
 ### Y! SPECIFIC SETTINGS ###

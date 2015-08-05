@@ -1,16 +1,32 @@
 Host *
 Compression yes
 
-Host *.yahoo-inc.com
-ForwardAgent yes
-ProxyCommand nc -x127.0.0.1:1080 -X5 %h %p
-
-Host *.yahoo.com
-ForwardAgent yes
-ProxyCommand nc -x127.0.0.1:1080 -X5 %h %p
-
-# Alias to bypass the ProxyCommand for *.yahoo.com
 Host yproxy
-HostName proxy.corp.yahoo.com
-ForwardAgent yes
-LocalForward 1080 socks.corp.yahoo.com:1080
+  # If your BY username is different than your local computer's username,
+  # uncomment these User lines and replace with your BY ID
+  # so you can omit your username when logging in.
+  #
+  # User YOUR_BACKYARD_ID
+  HostName proxy.corp.yahoo.com
+  Protocol 2
+  CompressionLevel 5
+  Cipher blowfish
+  ForwardAgent yes
+
+  # For future SSH sessions
+  DynamicForward 127.0.0.1:9080
+
+  # For HTTP over SOCKS
+#  LocalForward   127.0.0.1:1080  socks.yahoo.com:1080
+#  LocalForward   127.0.0.1:8080  yca-proxy.corp.yahoo.com:3128
+
+# Specific host example, e.g. for RDP.
+# Add more as needed.
+# LocalForward   127.0.0.1:3391  vm54.trust8.vops.corp.yahoo.com:3389
+
+# Host *.corp.yahoo.com *.corp.*.yahoo.com *.corp.yahoo-inc.com devel.yahoo.com html*.yahoo.com produce.yahoo.com vault.yahoo.com *.inktomisearch.com *.data.yahoo.com html.yahoo.com yahoohack.com yeti.cx *.flickr.com
+  ## User YOUR_BACKYARD_ID
+  # ControlMaster auto
+  # ControlPath   /tmp/ssh-ycorp-%h-%r-%p
+  # ProxyCommand  /usr/bin/nc -x 127.0.0.1:9080 %h %p
+  # ForwardAgent  yes
